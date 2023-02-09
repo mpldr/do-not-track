@@ -1,0 +1,28 @@
+
+body {
+	font-family: helvetica neue, arial, helvetica, sans-serif;
+	font-size: 11pt;
+}
+
+h1 {
+	font-size: 20pt;
+	margin: 0;
+}
+
+h2 {
+	font-size: 13pt;
+	margin-top: 1.5em;
+}
+
+h3 {
+	margin: 0;
+	padding: 0;
+	color: gray;
+	font-size: 10pt;
+	font-weight: normal;
+}
+
+#content {
+	margin: 3em auto;
+	width: 800px;
+}

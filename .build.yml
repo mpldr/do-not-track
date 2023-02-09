@@ -1,0 +1,15 @@
+image: alpine/edge
+oauth: pages.sr.ht/PAGES:RW
+packages:
+- hugo
+- hut
+tasks:
+- build: |
+    cd do-not-track.dev
+    hugo
+- package: |
+    cd do-not-track.dev/public
+    tar -cvz . > ~/site.tar.gz
+- upload: |
+    hut pages publish -d do-not-track.dev site.tar.gz
+
