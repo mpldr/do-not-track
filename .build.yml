@@ -1,6 +1,7 @@
 image: alpine/edge
 oauth: pages.sr.ht/PAGES:RW
 packages:
+- git
 - hugo
 - hut
 tasks:
@@ -12,4 +13,7 @@ tasks:
     tar -cvz . > ~/site.tar.gz
 - upload: |
     hut pages publish -d do-not-track.dev site.tar.gz
-
+- mirror-to-github:
+    cd do-not-track.dev
+    git remote add github git@github.com:mpldr/do-not-track.git
+    git push --force github
