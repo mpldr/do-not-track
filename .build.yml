@@ -1,5 +1,8 @@
 image: alpine/edge
 oauth: pages.sr.ht/PAGES:RW
+secrets:
+  - b15309e0-8156-44c8-aa7c-58c0f0b7d503 # GH known_hosts
+  - f1290f93-dd08-4aea-abf1-8b16ff767f34 # GH key
 packages:
 - git
 - hugo
@@ -13,7 +16,7 @@ tasks:
     tar -cvz . > ~/site.tar.gz
 - upload: |
     hut pages publish -d do-not-track.dev site.tar.gz
-- mirror-to-github:
+- mirror-to-github: |
     cd do-not-track.dev
     git remote add github git@github.com:mpldr/do-not-track.git
-    git push --force github
+    git push --force github HEAD:master
