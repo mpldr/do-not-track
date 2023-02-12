@@ -11,7 +11,7 @@ opting out easy with a simple, universally available setting.
 ## How it works
 
 The `DO_NOT_TRACK` environment variable acts in a very similar fashion to
-browser's `DNT` header, in that it's presence signals a desire not to be
+browser's `DNT` header, in that its presence signals a desire not to be
 tracked. Explicit consent can however, override this.
 
 To put it into code:
@@ -30,7 +30,7 @@ By doing this, you allow your user to set their own default
 
 ## What is telemetry?
 
-Telemetry is the automated collection of data and it's transmission to
+Telemetry is the automated collection of data and its transmission to
 a central receiver (usually, the developers). This includes, but is in no way
 limited to:
 - Usage patterns
